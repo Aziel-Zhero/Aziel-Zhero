@@ -73,7 +73,7 @@ Bem-vindo ao meu perfil GitHub! Sou apaixonado por código e estou sempre explor
   <img align="center" alt="Aziel-Ruby" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original.svg" /><br><br>
 
    <!--Conjunto de Versionamento-->
-  <img align="center" alt="Aziel-Github" height="30" width="40" style="filter: brightness(0) invert(1);" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original-wordmark.svg" />
+  <img align="center" alt="Aziel-Github" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original-wordmark.svg" />
   <img align="center" alt="Aziel-GitActions" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/githubactions/githubactions-original.svg" /><br><br>
 
   
