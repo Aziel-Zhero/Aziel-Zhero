@@ -1,0 +1,32 @@
+import os
+
+svg_content = """<svg xmlns="http://www.w3.org/2000/svg" width="490" height="350" viewBox="0 0 490 350">
+  <style>
+    .text { font-family: "Fira Code", monospace; font-size: 14px; fill: #c9d1d9; }
+    .label { fill: #2EA043; font-weight: bold; }
+    .title { fill: #be55fa; font-weight: bold; font-size: 16px; }
+    g { opacity: 0; animation: fadeIn 0.4s forwards; }
+    @keyframes fadeIn { to { opacity: 1; transform: translateX(0); } }
+    g:nth-child(1) { animation-delay: 0.1s; }
+    g:nth-child(2) { animation-delay: 0.3s; }
+    g:nth-child(3) { animation-delay: 0.5s; }
+    g:nth-child(4) { animation-delay: 0.7s; }
+    g:nth-child(5) { animation-delay: 0.9s; }
+    g:nth-child(6) { animation-delay: 1.1s; }
+    g:nth-child(7) { animation-delay: 1.3s; }
+    g:nth-child(8) { animation-delay: 1.5s; }
+  </style>
+  <rect width="100%" height="100%" fill="#0d1117" rx="8" />
+  <g transform="translate(20, 40)"><text class="title">aziel@github ~ $ neofetch</text></g>
+  <g transform="translate(20, 90)"><text class="text"><tspan class="label">Role:      </tspan>Fullstack Developer &amp; CyberSec</text></g>
+  <g transform="translate(20, 120)"><text class="text"><tspan class="label">Location:  </tspan>Pindamonhangaba, SP - Brazil</text></g>
+  <g transform="translate(20, 150)"><text class="text"><tspan class="label">Cert:      </tspan>CEH Master | OSINT</text></g>
+  <g transform="translate(20, 180)"><text class="text"><tspan class="label">Stack:     </tspan>Node.js, React, Python, PHP</text></g>
+  <g transform="translate(20, 210)"><text class="text"><tspan class="label">Database:  </tspan>PostgreSQL, Oracle, Redis</text></g>
+  <g transform="translate(20, 240)"><text class="text"><tspan class="label">Workflow:  </tspan>N8N, Make, Smart Contracts</text></g>
+  <g transform="translate(20, 270)"><text class="text"><tspan class="label">Design:    </tspan>Flat Design &amp; Vector Graphics</text></g>
+</svg>"""
+
+with open("info-card.svg", "w", encoding="utf-8") as f:
+    f.write(svg_content)
+print("✅ info-card.svg gerado com sucesso!")
