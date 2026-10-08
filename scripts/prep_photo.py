@@ -26,9 +26,18 @@ INP = sys.argv[1] if len(sys.argv) > 1 else os.path.join(HERE, "..", "source-pho
 OUT = sys.argv[2] if len(sys.argv) > 2 else os.path.join(HERE, "..", "source-prepped.png")
 
 LINE_WEIGHT = 0.6     # how hard drawn lines are pushed toward black
+MAX_SIDE = 2000        # reduces ONNX model memory use while keeping a clear subject
 
-# 1. cut out the subject
-cut = remove(Image.open(INP).convert("RGBA"))
+# 1. cut out the subject; downscale very large inputs before passing them to rembg
+source = Image.open(INP).convert("RGBA")
+scale = min(1.0, MAX_SIDE / max(source.size))
+if scale < 1.0:
+    source = source.resize(
+        (max(1, round(source.width * scale)), max(1, round(source.height * scale))),
+        Image.Resampling.LANCZOS,
+    )
+
+cut = remove(source)
 rgb = np.array(cut.convert("RGB"))
 alpha = np.array(cut.split()[-1])                 # 0 = background
 gray = cv2.cvtColor(rgb, cv2.COLOR_RGB2GRAY)
